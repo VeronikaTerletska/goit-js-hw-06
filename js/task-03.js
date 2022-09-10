@@ -15,11 +15,11 @@ const images = [
 const galleryRef = document.querySelector(".gallery");
 console.log(galleryRef);
 
-// const makeGalerryEL = (image) => {
-//   const { url, alt } = image;
-//   return `<li class = “gallery-item”><img src = “${url}“alt = “${alt}” width = “150"height = “200"/> </li>`;
-// };
-// const makeGallerryList = images.map(makeGalerryEL).join(” “);
-// // // console.log(makeGallerryList);
-// listRef.insertAdjacentHTML(“beforeend”, makeGallerryList);
-// // console.log(makeGallerryList);
+const makeGalerryEL = images.map(({ url, alt }) => {
+  return `<li class ="gallery-item"><img src = "${url}" alt = "${alt}" /> </li>`;
+});
+let makeGallerryList = makeGalerryEL.join("");
+
+console.log(makeGallerryList);
+galleryRef.insertAdjacentHTML("beforeend", makeGallerryList);
+console.log(makeGallerryList);
