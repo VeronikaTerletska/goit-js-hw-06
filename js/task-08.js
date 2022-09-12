@@ -8,7 +8,7 @@ form.addEventListener("submit", event => {
 
   if (email.value === "" || password.value === "") {
     alert("Будь ласка, заповніть всі поля!");
-    // return;
+    return;
   }
 
   console.log(`Email: ${email.value}, Password: ${password.value}`);
